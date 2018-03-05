@@ -18,3 +18,11 @@ Route::get('/shop', function () {
    
     return view('front-end.pages.shop-page.shop-page');
 });
+Route::get('/cart', function () {
+   
+    return view('front-end.pages.cart-page.cart-page');
+});
+Route::get('/product-detail', function () {
+   
+    return view('front-end.pages.product-detail-page.product-detail-page');
+});

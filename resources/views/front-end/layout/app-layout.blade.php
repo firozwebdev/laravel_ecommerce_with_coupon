@@ -27,6 +27,8 @@
     <!-- All pages are loaded below-->
     @yield('home-page')
     @yield('shop-page')
+    @yield('cart-page')
+    @yield('product-detail-page')
     
     
 
