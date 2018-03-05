@@ -10,27 +10,34 @@
     
     <title>Chocalate</title>
     
-    @include('layout.front-layout.style')
+    @include('front-end.common-parts.css.style')
 </head> 
 
 <body>
     <div class="wrapper">
             <!-- ****************** Header  Section ****************** -->
         <header id="header">
-            @include('layout.front-layout.front-layout-partials.top-navbar')
-            @include('layout.front-layout.front-layout-partials.navbar')
+            @include('front-end.common-parts.navbar.top-navbar')
+            @include('front-end.common-parts.navbar.navbar')
+            
 
         </header> 
     </div>
 
     <!-- All pages are loaded below-->
     @yield('home-page')
+    @yield('shop-page')
+    
     
 
 
+    <div class="wrapper">
+        <!-- ****************** Footer Section ****************** -->
+        @include('front-end.common-parts.footer.footer')
+    </div>
 
-
-    @include('layout.front-layout.script')
+    @include('front-end.common-parts.js.script')
+    <!--All new javascript will go here -->
     
 </body>
 </html>
