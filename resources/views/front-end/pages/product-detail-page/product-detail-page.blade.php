@@ -15,20 +15,20 @@
                                     <div class="col-sm-5">
                                         <div class="product-view">
                                             <div class="product-img">
-                                                <img src="assets/images/product-img.jpg" alt="" />
+                                                <img src="{{ asset('assets/images/product-img/'.$product->image ) }}" alt="" />
                                             </div>
-                                            <a href="assets/images/product-img.jpg" class="example-image-link view-btn" data-lightbox="example-1">
+                                            <a href="{{ asset('assets/images/product-img/'.$product->image ) }}" class="example-image-link view-btn" data-lightbox="example-1">
                                                 <i class="fa fa-search" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-sm-7">
                                         <div class="product-info">
-                                            <div class="name">Truffle Nut Collection</div>
+                                            <div class="name">{{ $product->name }}</div>
                                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                                             <p>We don't use any artificial flavors, all the paste inside the truffle chocolate is made from original dry nuts pulp. You will feel the best combination of chocolate and nuts in these truffles. Just try you will fall in love on the first bite.</p>
                                             <div class="availability">Availability: In stock</div>
-                                            <div class="price">$ 449.0</div>
+                                            <div class="price">{{ $product->price }}</div>
                                             <div>
                                                 <div class="input-group qty-btn">
                                                     <span class="input-group-btn">
@@ -58,13 +58,10 @@
                                 </ul>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="description">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                        <p>{{ $product->description }}</p>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="reviews">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        <p>{{ $product->review }} . This is good review...</p>
                                     </div>
                                 </div>
                             </div>

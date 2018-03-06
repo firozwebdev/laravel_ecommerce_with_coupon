@@ -9,5 +9,8 @@
     <script src="{{ asset('assets/js/wNumb.js') }}"></script><!-- Number Formatter js --> 
     <script src="{{ asset('assets/js/nouislider.min.js') }}"></script><!-- Price Range Selector js -->
 
+    <script src="{{ asset('assets/js/range-button.js') }}"></script> <!-- Range Button js-->
+    <script src="{{ asset('assets/js/lightbox.js') }}"></script> <!-- Lightbox js-->
+
     <script src="{{ asset('assets/js/custom.js') }}"></script> <!-- custom js--> 
 

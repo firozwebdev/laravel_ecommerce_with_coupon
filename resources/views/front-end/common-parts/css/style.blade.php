@@ -9,6 +9,7 @@
     <link href="{{ asset('assets/css/nouislider.min.css') }}" rel="stylesheet"><!-- Price Range Selector css -->
     <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet"> <!-- slick css -->
     <link href="{{ asset('assets/css/slick-theme.css') }}" rel="stylesheet"> <!-- slick-theme css -->
+    <link href="{{ asset('assets/css/lightbox.css') }}" rel="stylesheet"> <!-- lightbox css -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> <!-- style css -->
 	  <link href="{{ asset('assets/css/css3.css') }}" rel="stylesheet"> <!-- css3 style -->
     <!--[if lt IE 9]>

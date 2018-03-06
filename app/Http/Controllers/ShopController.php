@@ -14,7 +14,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $products = Product::inRandomOrder()->take(16)->get();
+        $products = Product::inRandomOrder()->take(12)->get();
         return view('front-end.pages.shop-page.shop-page')->with('products',$products);
     }
 
@@ -45,9 +45,11 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $product = Product::where('slug',$slug)->firstOrFail();
+
+        return view('front-end.pages.product-detail-page.product-detail-page')->with('product',$product);
     }
 
     /**

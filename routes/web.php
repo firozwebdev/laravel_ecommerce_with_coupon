@@ -18,7 +18,11 @@ Route::get('/',[
 
 Route::get('/shop',[
     'uses' => 'ShopController@index',
-    'as' => 'shop.page.index'
+    'as' => 'shop.index'
+]);
+Route::get('/shop/{product}',[
+    'uses' => 'ShopController@show',
+    'as' => 'shop.show'
 ]);
 
 Route::get('/cart', function () {
