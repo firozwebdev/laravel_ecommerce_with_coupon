@@ -11,18 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front-end.pages.front-page.home-page');
-});
-Route::get('/shop', function () {
-   
-    return view('front-end.pages.shop-page.shop-page');
-});
+Route::get('/',[
+    'uses' => 'LandingPageController@index',
+    'as' => 'home.page.index'
+]);
+
+Route::get('/shop',[
+    'uses' => 'ShopController@index',
+    'as' => 'shop.page.index'
+]);
+
 Route::get('/cart', function () {
    
     return view('front-end.pages.cart-page.cart-page');
 });
+
 Route::get('/product-detail', function () {
    
     return view('front-end.pages.product-detail-page.product-detail-page');
+});
+
+Route::get('/checkout', function () {
+   
+    return view('front-end.pages.checkout-page.checkout-page');
 });

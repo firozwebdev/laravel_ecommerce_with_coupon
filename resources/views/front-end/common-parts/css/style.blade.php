@@ -5,10 +5,12 @@
     
     <!-- CSS Stylesheet -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet"> <!-- bootstrap.min css -->
+    <link href="{{ asset('assets/css/bootstrap-select.css') }}" rel="stylesheet"><!-- bootsrap selectbox -->
+    <link href="{{ asset('assets/css/nouislider.min.css') }}" rel="stylesheet"><!-- Price Range Selector css -->
     <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet"> <!-- slick css -->
     <link href="{{ asset('assets/css/slick-theme.css') }}" rel="stylesheet"> <!-- slick-theme css -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> <!-- style css -->
-	<link href="{{ asset('assets/css/css3.css') }}" rel="stylesheet"> <!-- css3 style -->
+	  <link href="{{ asset('assets/css/css3.css') }}" rel="stylesheet"> <!-- css3 style -->
     <!--[if lt IE 9]>
       <link href="{{ asset('assets/css/ie8.css') }}" rel="stylesheet">
     <![endif]-->

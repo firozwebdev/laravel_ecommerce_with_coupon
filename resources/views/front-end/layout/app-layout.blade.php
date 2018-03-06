@@ -29,6 +29,7 @@
     @yield('shop-page')
     @yield('cart-page')
     @yield('product-detail-page')
+    @yield('checkout-page')
     
     
 
