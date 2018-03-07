@@ -82,7 +82,7 @@
 
         <!-- ****************** Featured Products Section ****************** -->
 
-        @include('front-end.common-parts.template-items.featured-product')
+        @include('front-end.common-parts.template-items.products')
 
         <!-- ****************** Best Sellers Section ****************** -->
         @include('front-end.common-parts.template-items.best-sold-product')

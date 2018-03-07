@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 
-class ShopController extends Controller
+class StoreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,6 @@ class ShopController extends Controller
      */
     public function index()
     {
-        
         $products = Product::inRandomOrder()->take(12)->get();
         return view('front-end.pages.shop-page.shop-page')->with('products',$products);
     }

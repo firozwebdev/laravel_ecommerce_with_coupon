@@ -16,16 +16,22 @@ Route::get('/',[
     'as' => 'home.page.index'
 ]);
 
-Route::get('/shop',[
-    'uses' => 'ShopController@index',
-    'as' => 'shop.index'
-]);
-Route::get('/shop/{product}',[
-    'uses' => 'ShopController@show',
-    'as' => 'shop.show'
+
+Route::get('/store',[
+    'uses' => 'StoreController@index',
+    'as' => 'store.index'
 ]);
 
-Route::get('/cart', function () {
+
+Route::get('/store/{product}',[
+    'uses' => 'StoreController@show',
+    'as' => 'store.show'
+]);
+
+
+
+
+/*Route::get('/cart', function () {
    
     return view('front-end.pages.cart-page.cart-page');
 });
@@ -39,3 +45,4 @@ Route::get('/checkout', function () {
    
     return view('front-end.pages.checkout-page.checkout-page');
 });
+*/

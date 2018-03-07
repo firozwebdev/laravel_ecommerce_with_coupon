@@ -1,14 +1,14 @@
-<section class="feature-products section-block">
+<section class="best-seller section-block">
     <div class="container">
-        <div class="heading"><span>Featured Products</span></div>
+        <div class="heading"><span>Products</span></div>
         <div class="product-list">
             <div class="row">
-                <?php $i=0; ?>
+                
                 @foreach ($products as $product)
-                <?php $i++; ?>
+                
                 <div class="col-md-3 col-sm-6">
                         <div class="product-box">
-                        <div class="img"><img src="/assets/images/product-img/img{{ $i }}.jpg" alt="" /></div>
+                        <div class="img"><img src="/assets/images/product-img/{{ $product->image }}" alt="" /></div>
                             <div class="product-detail">
                                 <div class="name"><strong>{{ $product->name }}- </strong>Chocolate bar with and 14 Milk Chocolates</div>
                                 <div class="rating">
@@ -31,8 +31,7 @@
                     </div>
                   
                 @endforeach
-                 
             </div>
         </div>
     </div>
-</section>
+</section> 
