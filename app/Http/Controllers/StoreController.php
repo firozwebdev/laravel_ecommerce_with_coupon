@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class StoreController extends Controller
 {
@@ -91,4 +93,45 @@ class StoreController extends Controller
     {
         //
     }
+ 
+   
+   public function short_by_price_with_category(Request $request){
+
+   
+    $category_id = Session::get('category_id');
+        if($category_id){
+            $min_price = $request->min;
+            $max_price = $request->max;
+            $products = Eproduct::where('ecategory_id',$category_id)->whereBetween('product_price', [$min_price, $max_price])
+                ->get();
+
+
+                return $products;
+
+        } 
+
+        //$min_price = $request->min;
+        $min_price= $request->min;
+        $max_price= $request->max;
+        
+
+        
+        
+        //$products = Product::whereBetween('price', [$min_price, $max_price])->get();
+        $products = DB::table('products')
+        ->whereBetween('price', [$min_price, $max_price])->get();
+
+
+        return response()->json([
+            'result'=>'Saved',
+            'min_price'=> $request->min,
+            'max_price'=> $request->max,
+            'products'=> $products,
+            'message'=>'Task has been updated successfully.'
+        ]);
+      
+
+    } 
+    
+
 }

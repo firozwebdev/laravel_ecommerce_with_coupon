@@ -1,21 +1,9 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/',[
-    'uses' => 'LandingPageController@index',
-    'as' => 'home.page.index'
+Route::post('/sort-by-pricewithcategory',[
+    'uses' => 'StoreController@short_by_price_with_category',
+    'as' => 'store.sort'
 ]);
-
 
 Route::get('/store',[
     'uses' => 'StoreController@index',
@@ -29,6 +17,33 @@ Route::get('/store/{product}',[
 ]);
 
 
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+/*
+Route::get('/',[
+    'uses' => 'LandingPageController@index',
+    'as' => 'home.page.index'
+]);
+
+
+
+
+
+Route::get('/sort-by-pricewithcategory',[
+    'uses' => 'StoreController@short_by_price_with_category',
+    //'as' => 'shop.pricewithcategory.slider'
+]);
 
 
 /*Route::get('/cart', function () {
